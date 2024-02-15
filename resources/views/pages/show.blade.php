@@ -6,7 +6,12 @@
 <h1>Hello, World!</h1>
 
 <div>
-    <h1>comic</h1>
-    {{$comic->nome}}
+    <h1>
+        [
+        {{ $comic -> id }}
+        ]
+        Employee:
+        {{ $comic -> nome }}
+    </h1>
 </div>
 @endsection

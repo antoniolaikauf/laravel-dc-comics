@@ -5,17 +5,23 @@
 @section('content')
 <h1>Hello, World!</h1>
 
-<form action="">
+<form action="{{ route('users.store') }}" method="POST">
+
+    @csrf
+
+    @method('POST')
+
+
     <div class="my-3">
-        <label for="name-comic">nome comic</label>
+        <label for="nome">nome comic</label>
         <div>
-            <input type="text" name="name" id="name-comic">
+            <input type="text" name="nome" id="nome">
         </div>
     </div>
     <div class="my-3">
-        <label for="data">data della sua uscita</label>
+        <label for="girono_uscita">data della sua uscita</label>
         <div>
-            <input type="text" name="data-uscita" id="data">
+            <input type="text" name="girono_uscita" id="girono_uscita">
         </div>
     </div>
     <div class="my-3">
@@ -24,6 +30,6 @@
             <input type="text" name="voto" id="voto">
         </div>
     </div>
-    <input type="button" value="crea">
+    <input type="submit" value="create">
 </form>
 @endsection
