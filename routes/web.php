@@ -3,4 +3,5 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
 
-Route::get('/', [ComicController::class, 'index']);
+Route::get('/', [ComicController::class, 'index'])->name('users.index');
+Route::get('/users/{id}', [ComicController::class, 'show'])->name('users.show');
