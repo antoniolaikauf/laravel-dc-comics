@@ -8,13 +8,14 @@
 
 <a href="{{route('users.create')}}">crea un nuovo comic</a>
 
-<ul class="my-3">
+<ul class="list-group my-3 lista">
     @foreach($comics as $comic)
-    <li>
+    <li class="list-group-item">
         <a href="{{route('users.show',$comic -> id)}}">
             nome del comic: {{ $comic->nome}}
         </a>
     </li>
     @endforeach
 </ul>
+
 @endsection
