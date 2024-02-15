@@ -3,15 +3,25 @@
 <title>Home</title>
 @endsection
 @section('content')
-<h1>Hello, World!</h1>
 
 <div>
     <h1>
         [
         {{ $comic -> id }}
         ]
-        Employee:
-        {{ $comic -> nome }}
+        <div>
+            nome film: {{ $comic -> nome }}
+        </div>
+
+        <div>
+            voto film:{{ $comic -> voto }}
+        </div>
+        <div>
+            giorno uscita:{{ $comic -> girono_uscita  }}
+        </div>
+        <div>
+
+        </div>
     </h1>
 </div>
 @endsection
