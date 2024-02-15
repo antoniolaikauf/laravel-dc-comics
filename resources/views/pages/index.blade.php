@@ -7,7 +7,9 @@
 
 <h1>{{count($comics)}}</h1>
 
-<ul>
+<a href="{{route('users.create')}}">crea un nuovo comic</a>
+
+<ul class="my-3">
     @foreach($comics as $comic)
     <li>
         <a href="{{route('users.show',$comic -> id)}}">
