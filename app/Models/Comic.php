@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comic extends Model
 {
+    // qua non si cambia niente
     use HasFactory;
 }

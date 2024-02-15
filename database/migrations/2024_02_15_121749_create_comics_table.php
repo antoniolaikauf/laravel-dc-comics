@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('comics', function (Blueprint $table) {
+            // creazione migrazion con dentro le colonne e il loro argomento 
             $table->id();
 
             $table->string('nome');

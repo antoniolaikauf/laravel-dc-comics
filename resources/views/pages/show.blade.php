@@ -4,11 +4,9 @@
 @endsection
 @section('content')
 
+<!-- qua si mostra il singolo elemento -->
 <div>
     <h1>
-        [
-        {{ $comic -> id }}
-        ]
         <div>
             nome film: {{ $comic -> nome }}
         </div>

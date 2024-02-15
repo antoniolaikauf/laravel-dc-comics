@@ -4,13 +4,14 @@
 @endsection
 @section('content')
 
+<!-- action users.store sarebbe il metodo in nel comic controller  -->
 <form action="{{ route('users.store') }}" method="POST">
-
+    <!-- token per sicurezza  -->
     @csrf
-
+    <!-- metodo post si usa nei form -->
     @method('POST')
 
-
+<!-- il nam eva dentro al metodo store nelle quadre in file comiccontroller -->
     <div class="my-3">
         <label for="nome">nome comic</label>
         <div>

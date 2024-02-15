@@ -17,6 +17,7 @@ class ComicFactory extends Factory
     public function definition()
     {
         return [
+            // qua si creano i dati fake presi da fakerphp
             'nome'=>fake()->word() ,
             'girono_uscita'=>fake()->date() ,
             'voto'=>fake()->numberBetween(1, 5) ,
