@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('nome');
-            $table->date('girono_uscita');
+            $table->integer('prezzo');
             $table->tinyInteger('voto');
 
             $table->timestamps();

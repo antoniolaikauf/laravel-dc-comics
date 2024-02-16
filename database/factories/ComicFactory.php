@@ -19,7 +19,7 @@ class ComicFactory extends Factory
         return [
             // qua si creano i dati fake presi da fakerphp
             'nome'=>fake()->word() ,
-            'girono_uscita'=>fake()->date() ,
+            'prezzo'=>fake()->numberBetween(5, 100) ,
             'voto'=>fake()->numberBetween(1, 5) ,
         ];
     }

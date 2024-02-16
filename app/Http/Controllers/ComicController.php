@@ -49,7 +49,7 @@ class ComicController extends Controller
 
         // nelle quadre si mettono i rag name che si hanno nel form
         $newComic->nome = $data['nome'];
-        $newComic->girono_uscita = $data['girono_uscita'];
+        $newComic->prezzo = $data['prezzo'];
         $newComic->voto = $data['voto'];
         // si salva lanuova row 
         $newComic->save();
@@ -97,7 +97,7 @@ class ComicController extends Controller
         $comic = Comic::find($id);
         $data = $request->all();
         $comic->nome = $data['nome'];
-        $comic->girono_uscita = $data['girono_uscita'];
+        $comic->prezzo = $data['prezzo'];
         $comic->voto = $data['voto'];
         // si salva lanuova row 
         $comic->save();

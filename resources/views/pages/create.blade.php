@@ -19,9 +19,9 @@
         </div>
     </div>
     <div class="my-3">
-        <label for="girono_uscita">data della sua uscita</label>
+        <label for="prezzo">prezzo</label>
         <div>
-            <input type="text" name="girono_uscita" id="girono_uscita">
+            <input type="text" name="prezzo" id="prezzo">
         </div>
     </div>
     <div class="my-3">

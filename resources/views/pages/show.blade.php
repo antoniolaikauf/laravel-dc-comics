@@ -12,7 +12,7 @@
         </div>
 
         <div>
-            voto film:{{ $comic -> voto }}
+            voto film:{{ $comic -> prezzo }}
         </div>
         <div>
             giorno uscita:{{ $comic -> girono_uscita  }}
