@@ -14,6 +14,13 @@
         <a href="{{route('users.show',$comic -> id)}}">
             nome del comic: {{ $comic->nome}}
         </a>
+        <form action="{{route('users.destroy',$comic -> id)}}" method="POST">
+            <!-- token per sicurezza  -->
+            @csrf
+            <!-- metodo post si usa nei form -->
+            @method('DELETE')
+            <input type="submit" value="delete">
+        </form>
     </li>
     @endforeach
 </ul>
