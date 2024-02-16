@@ -18,4 +18,4 @@ Route::delete('/users/{id}', [ComicController::class, 'destroy'])->name('users.d
 // sesta rotta per andare all apgine edit del elemento cliccato 
 Route::get('/users/{id}/edit', [ComicController::class, 'edit'])->name('users.edit');
 // settima rotta per modiicare elemento e tornare alla pagina iniziale 
-Route::put('/users/{id}/index', [ComicController::class, 'update'])->name('users.update');
+Route::put('/users/{id}', [ComicController::class, 'update'])->name('users.update');
