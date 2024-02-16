@@ -89,7 +89,15 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comic = Comic::find($id);
+        $data = $request->all();
+        $comic->nome = $data['nome'];
+        $comic->girono_uscita = $data['girono_uscita'];
+        $comic->voto = $data['voto'];
+        // si salva lanuova row 
+        $comic->save();
+        // e qua non si fa vedere una nuova pagina se si vuolema si ritorna alla pagina principale
+        return redirect()->route('users.index');
     }
 
     /**
