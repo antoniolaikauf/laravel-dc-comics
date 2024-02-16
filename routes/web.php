@@ -6,6 +6,7 @@ use App\Http\Controllers\ComicController;
 // NB IL NAME SI RIFERISCE AL METODO DENTRO AL COMICCONTROLLER
 // NB LE ROTTE CON LE VARIABILI VANNO SEMPRE ALLA FINE 
 // prima rotta base fa vedere tutti gli elementi 
+// '/users/create' quest sarebbe la rotta , 'create'questo sarebbe il nome del metodo , 'users.create' questo il nome della rotta 
 Route::get('/', [ComicController::class, 'index'])->name('users.index');
 // seconda rotta mostra la pagina dove compare il form 
 Route::get('/users/create', [ComicController::class, 'create'])->name('users.create');
