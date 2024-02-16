@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 // importare il model che conterra i dati del database 
 use App\Models\Comic;
 
+// NB SI USA IL REDIRECT QUANDO NON DEVI MODIFICARE ELEMENTI IN DATABASE 
+// SI USA VIEW QUANDO NON DEVI MODIFICARE 
+
 class ComicController extends Controller
 {
     /**
@@ -89,6 +92,8 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // vengono passati du eparametri qua la request dove ci sono i nuovi dati dell'elemento specifico e l'id che si riferisce all'elemento cliccato 
+        // è una fusione tra metodo store e show
         $comic = Comic::find($id);
         $data = $request->all();
         $comic->nome = $data['nome'];
@@ -108,6 +113,7 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
+        // qua viene passato solo l'id che deve essere eliminato 
         $deleteComic = Comic::find($id);
         $deleteComic->delete();
 

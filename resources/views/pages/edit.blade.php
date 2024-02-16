@@ -11,7 +11,7 @@
     <!-- metodo post si usa nei form -->
     @method('PUT')
 
-    <!-- il nam eva dentro al metodo store nelle quadre in file comiccontroller -->
+    <!-- il name va dentro al metodo store nelle quadre in file comiccontroller -->
     <div class="my-3">
         <label for="nome">nome comic</label>
         <div>
