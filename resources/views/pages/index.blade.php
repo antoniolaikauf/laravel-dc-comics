@@ -21,6 +21,7 @@
             @method('DELETE')
             <input type="submit" value="delete">
         </form>
+        <a href="{{route('users.edit',$comic -> id)}}">aggiorna</a>
     </li>
     @endforeach
 </ul>
