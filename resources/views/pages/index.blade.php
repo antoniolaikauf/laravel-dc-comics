@@ -19,7 +19,7 @@
             @csrf
             <!-- metodo post si usa nei form -->
             @method('DELETE')
-            <input type="submit" value="delete" id="myButton">
+            <input type="submit" value="delete" id="deleteButton">
         </form>
         <a href="{{route('users.edit',$comic -> id)}}">aggiorna</a>
     </li>

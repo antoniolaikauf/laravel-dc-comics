@@ -116,7 +116,6 @@ class ComicController extends Controller
         // qua viene passato solo l'id che deve essere eliminato 
         $deleteComic = Comic::find($id);
         $deleteComic->delete();
-
         return redirect()->route('users.index');
     }
 }
