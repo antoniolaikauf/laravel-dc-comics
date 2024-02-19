@@ -4,6 +4,16 @@
 @endsection
 @section('content')
 
+<!--controllo del valore negli input -->
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 <!-- action users.store sarebbe il metodo in nel comic controller  -->
 <form action="{{ route('users.update',$comic -> id) }}" method="POST">
     <!-- token per sicurezza  -->

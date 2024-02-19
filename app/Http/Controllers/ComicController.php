@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 // importare il model che conterra i dati del database 
 use App\Models\Comic;
 
+// import delle request
+use App\Http\Requests\ComicFormRequests;
+
 // NB SI USA IL REDIRECT QUANDO NON DEVI MODIFICARE ELEMENTI IN DATABASE 
 // SI USA VIEW QUANDO NON DEVI MODIFICARE 
 
@@ -41,7 +44,7 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicFormRequests $request)
     {
         // metodo store si prende tutti i dati che ci sono dentro nel form e si crea una nuova row nel database con questi dati 
         $data = $request->all();
@@ -90,7 +93,7 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ComicFormRequests $request, $id)
     {
         // vengono passati du eparametri qua la request dove ci sono i nuovi dati dell'elemento specifico e l'id che si riferisce all'elemento cliccato 
         // è una fusione tra metodo store e show
